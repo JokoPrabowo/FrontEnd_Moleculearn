@@ -1,0 +1,36 @@
+.signup-app{
+    background-color: #ececec;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-app .signup-card{
+    padding: 10px;
+    width: 50%;
+    height: 85%;
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 4px 4px 20px #8a8a8a;
+}
+.signup-app .signup-card .signup-footer{
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content:end;
+    align-items:center;
+}
+.signup-app .signup-card .signup-footer .createbtn{
+    margin-top: 10px;
+    width: 150px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid transparent;
+}
+.signup-app .signup-card .signup-footer .createbtn:hover{
+    color: white;
+    background-color: black;
+    border: 2px solid transparent;
+}

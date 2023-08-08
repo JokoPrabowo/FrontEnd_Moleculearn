@@ -1,0 +1,123 @@
+.pretest-app{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pretest-card{
+    width: 80%;
+    border: none;
+}
+.pretest-body{
+    text-align: center;
+    height: 400px;
+}
+.pretest-body h1{
+    font-weight: bold;
+    font-size: 100px;
+    font-family: Verdana, sans-serif;
+}
+.pretest-body button{
+    padding: 10px;
+    width: 15%;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #32CD32;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 7px #2E8B57;
+    transition: all .10s ease;
+}
+.pretest-body button:active{
+    box-shadow:none;
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .pretest-body{
+        width: 80%;
+    }
+    .pretest-body h1{
+        font-size: 50px;
+    }
+    .pretest-body h3{
+        font-size: 24px;
+    }
+    .pretest-body h5{
+        font-size: 16px;
+    }
+    .pretest-body button{
+        width: 40%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .pretest-body h1{
+        font-size: 50px;
+    }
+    .pretest-body h3{
+        font-size: 24px;
+    }
+    .pretest-body h5{
+        font-size: 16px;
+    }
+    .pretest-body button{
+        width: 35%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .pretest-body h1{
+        font-size: 70px;
+    }
+    .pretest-body h3{
+        font-size: 28px;
+    }
+    .pretest-body h5{
+        font-size: 18px;
+    }
+    .pretest-body button{
+        width: 25%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .pretest-body h1{
+        font-size: 100px;
+    }
+    .pretest-body h3{
+        font-size: 30px;
+    }
+    .pretest-body h5{
+        font-size: 20px;
+    }
+    .pretest-body button{
+        width: 20%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .pretest-body h1{
+        font-size: 100px;
+    }
+    .pretest-body h3{
+        font-size: 30px;
+    }
+    .pretest-body h5{
+        font-size: 20px;
+    }
+    .pretest-body button{
+        width: 20%;
+    }
+}

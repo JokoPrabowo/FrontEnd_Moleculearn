@@ -1,0 +1,122 @@
+.result-app {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result-app .result-card{
+    width: 80%;
+    border: none;
+}
+.result-app .result-card .result-body{
+    text-align: center;
+    height: 400px;
+
+}
+.result-app .result-card .result-body h1{
+    font-weight: bold;
+    font-size: 150px;
+    font-family:Verdana;
+    color: #0F52BA;
+}
+.result-app .result-card .result-body button{
+    padding: 10px;
+    width: 15%;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #32CD32;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 7px #2E8B57;
+    transition: all .10s ease;
+}
+.result-app .result-card .result-body button:active{
+    box-shadow:none;
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .result-app .result-card .result-body h1{
+        font-size: 100px;
+    }
+    .result-app .result-card .result-body h3{
+        font-size: 24px;
+    }
+    .result-app .result-card .result-body h5{
+        font-size: 16px;
+    }
+    .result-app .result-card .result-body button{
+        width: 40%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .result-app .result-card .result-body h1{
+        font-size: 100px;
+    }
+    .result-app .result-card .result-body h3{
+        font-size: 24px;
+    }
+    .result-app .result-card .result-body h5{
+        font-size: 16px;
+    }
+    .result-app .result-card .result-body button{
+        width: 35%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .result-app .result-card .result-body h1{
+        font-size: 120px;
+    }
+    .result-app .result-card .result-body h3{
+        font-size: 28px;
+    }
+    .result-app .result-card .result-body h5{
+        font-size: 18px;
+    }
+    .result-app .result-card .result-body button{
+        width: 25%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .result-app .result-card .result-body h1{
+        font-size: 150px;
+    }
+    .result-app .result-card .result-body h3{
+        font-size: 30px;
+    }
+    .result-app .result-card .result-body h5{
+        font-size: 20px;
+    }
+    .result-app .result-card .result-body button{
+        width: 20%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .result-app .result-card .result-body h1{
+        font-size: 150px;
+    }
+    .result-app .result-card .result-body h3{
+        font-size: 30px;
+    }
+    .result-app .result-card .result-body h5{
+        font-size: 20px;
+    }
+    .result-app .result-card .result-body button{
+        width: 20%;
+    }
+}
