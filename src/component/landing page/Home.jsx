@@ -13,19 +13,19 @@ import { signIn, logout } from "../../redux/actions/authActions";
 export default function Home() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const [show, setShow] = useState(false);
-    const [ showLogout, setShowLogout ] = useState(false);
-    const profile = localStorage.getItem("user");
-    const user = JSON.parse(profile);
+    // const [show, setShow] = useState(false);
+    // const [ showLogout, setShowLogout ] = useState(false);
+    // const profile = localStorage.getItem("user");
+    // const user = JSON.parse(profile);
 
-    useEffect(() => {
-        if(user){
-            if(user.pretest === false){
-                toggleShow();
-                navigate('/pretest');
-            }
-        }
-    }, [])
+    // useEffect(() => {
+    //     if(user){
+    //         if(user.pretest === false){
+    //             toggleShow();
+    //             navigate('/pretest');
+    //         }
+    //     }
+    // }, [])
             
     const handleLesson = (e) => {
         if(user) {
@@ -107,7 +107,7 @@ export default function Home() {
                 <Col className="headerbtn col-lg-6 col-md-12 col-sm-12 col-12">
                     <h3>Cara seru untuk belajar ikatan kimia!</h3>
                     <br/>
-                    <button onClick={handleLesson}>Materi</button>
+                    <button variant="light" onClick={handleLesson}>Materi</button>
                     <br/>
                     <button variant="light" onClick={handleTrain}>Latihan</button>
                     <br/>
