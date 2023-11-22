@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Col, Container, Navbar, Row } from "react-bootstrap";
-// import SignIn from "./SignIn";
-// import Logout from "./Logout";
+import SignIn from "./SignIn";
+import Logout from "./Logout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import gb1 from "../../images/learning.jpg";
 import "../../css/home.css";
 
-// import { signIn, logout } from "../../redux/actions/authActions";
+import { signIn, logout } from "../../redux/actions/authActions";
 
 export default function Home() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
-    // const [show, setShow] = useState(false);
-    // const [ showLogout, setShowLogout ] = useState(false);
-    // const profile = localStorage.getItem("user");
-    // const user = JSON.parse(profile);
+    const [show, setShow] = useState(false);
+    const [ showLogout, setShowLogout ] = useState(false);
+    const profile = localStorage.getItem("user");
+    const user = JSON.parse(profile);
 
     // useEffect(() => {
     //     if(user){
@@ -28,66 +28,66 @@ export default function Home() {
     // }, [])
             
     const handleLesson = (e) => {
-        e.preventDefault();
-        navigate('/materi');
-        // if(user) {
-        //     e.preventDefault();
-        //     navigate('/materi');
-        // }else {
-        //     setShow(true);
-        // }
+        // e.preventDefault();
+        // navigate('/materi');
+        if(user) {
+            e.preventDefault();
+            navigate('/materi');
+        }else {
+            setShow(true);
+        }
     };
 
     const handleTrain = (e) => {
-        e.preventDefault();
-        navigate('/latihan');
-        // if(user) {
-        //     e.preventDefault();
-        //     navigate('/latihan')
-        // }else {
-        //     setShow(true);
-        // }
+        // e.preventDefault();
+        // navigate('/latihan');
+        if(user) {
+            e.preventDefault();
+            navigate('/latihan')
+        }else {
+            setShow(true);
+        }
     };
 
     const handleQuiz = (e) => {
-        e.preventDefault();
-        navigate('/latihan');
-        // if(user) {
-        //     e.preventDefault();
-        //     navigate('/kuis')
-        // }else {
-        //     setShow(true);
-        // }
+        // e.preventDefault();
+        // navigate('/latihan');
+        if(user) {
+            e.preventDefault();
+            navigate('/kuis')
+        }else {
+            setShow(true);
+        }
     };
 
-    // const toggleShow = () => {
-    //     setShow(false);
-    // }
+    const toggleShow = () => {
+        setShow(false);
+    }
 
-    // const toggleModal = () => {
-    //     setShowLogout(false);
-    // }
+    const toggleModal = () => {
+        setShowLogout(false);
+    }
 
-    // const handleShowLogout = (e) => {
-    //     e.preventDefault();
-    //     setShowLogout(true);
-    // }
+    const handleShowLogout = (e) => {
+        e.preventDefault();
+        setShowLogout(true);
+    }
 
-    // const getData = (data) => {
-    //     dispatch(signIn(data))
-    //     .then(() => {
-    //         toggleShow();
-    //         window.location.reload();
-    //     })
-    // }
+    const getData = (data) => {
+        dispatch(signIn(data))
+        .then(() => {
+            toggleShow();
+            window.location.reload();
+        })
+    }
 
-    // const handleLogout = () => {
-    //     dispatch(logout())
-    //     .then(() =>{
-    //         toggleModal();
-    //         window.location.reload();
-    //     })
-    // }
+    const handleLogout = () => {
+        dispatch(logout())
+        .then(() =>{
+            toggleModal();
+            window.location.reload();
+        })
+    }
 
     return(
         <Container fluid className="home-app">
@@ -120,8 +120,8 @@ export default function Home() {
                     <button variant="light" onClick={handleQuiz}>Kuis</button>
                 </Col>
              </Row>
-             {/* <SignIn show={show} onSubmit={getData} toggleShow={toggleShow}/>
-             <Logout show={showLogout} handleLogout={handleLogout} toggleModal={toggleModal} /> */}
+             <SignIn show={show} onSubmit={getData} toggleShow={toggleShow}/>
+             <Logout show={showLogout} handleLogout={handleLogout} toggleModal={toggleModal} />
         </Container>
     )
 }
