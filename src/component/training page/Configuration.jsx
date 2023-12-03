@@ -19,7 +19,7 @@ export default function Configuration() {
     const [n, setN] = useState('0');
     const [o, setO] = useState('0');
     const [p, setP] = useState('0');
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
     const { atom } = useSelector((state) => state.atom);
 
     useEffect(() => {
@@ -72,7 +72,7 @@ export default function Configuration() {
     }
     return(
         <Container fluid className="config-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <>
                     <button className="close btn-close" onClick={() => navigate('/')}></button>
                     <Card className="config-card">
@@ -121,9 +121,9 @@ export default function Configuration() {
                         </Card.Footer>
                     </Card>
                 </>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }
