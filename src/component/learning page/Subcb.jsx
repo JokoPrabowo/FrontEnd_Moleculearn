@@ -14,8 +14,8 @@ export default function Subcb() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [btn, setBtn] = useState(true);
-    const profile = localStorage.getItem("user");
-    const user = JSON.parse(profile);
+    // const profile = localStorage.getItem("user");
+    // const user = JSON.parse(profile);
 
     useEffect(() =>{
         setTimeout(() => {
@@ -25,17 +25,17 @@ export default function Subcb() {
 
     const handleNext = () => {
         setBtn(true);
-        const level = 4;
-        if(user.level < level){
-            dispatch(updateLevel({level}));
-        }
+        // const level = 4;
+        // if(user.level < level){
+        //     dispatch(updateLevel({level}));
+        // }
         setTimeout(() =>{
             navigate('/materi');
-        }, 2000);
+        }, 1000);
     }
     return (
         <Container fluid className="subject-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Ikatan Ionik</h1>
@@ -47,9 +47,9 @@ export default function Subcb() {
                         <button onClick={handleNext} disabled={btn}>Selesai</button>
                     </div>
                 </div>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

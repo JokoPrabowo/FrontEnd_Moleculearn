@@ -8,7 +8,7 @@ import Store from "./redux/Store";
 import {
   Home, SignUp, Learn, 
   Suba, Subb, Subba, Subc, Subca, Subcb, Subd, Subda, Subdb, Subdc, Subdd, Subde, Subdf, Summary,
-  Quiz, Pretest, Train
+  Quiz, Pretest, Train, Configuration
 } from "./component";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +19,8 @@ root.render(
           <Route path='/' element={<Home/>}/>
           <Route path='/daftar' element={<SignUp/>}/>
           <Route path='/materi' element={<Learn/>}/>
-          <Route path='/latihan' element={<Train/>}/>
+          <Route path='/ikatan_kimia' element={<Train/>}/>
+          <Route path='/konfigurasi_elektron' element={<Configuration/>}/>
           <Route path='/kuis' element={<Quiz/>}/>
           <Route path='/pretest' element={<Pretest/>}/>
           <Route path='/materi/pengantar' element={<Suba/>}/>

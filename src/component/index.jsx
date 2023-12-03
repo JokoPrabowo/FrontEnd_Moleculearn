@@ -1,7 +1,7 @@
 import { Home, SignUp } from "./landing page";
 import { Learn, Suba, Subb, Subba, Subc, Subca, Subcb, Subd, 
          Subda, Subdb, Subdc, Subdd, Subde, Subdf, Summary } from "./learning page";
-import { Quiz, Train, Pretest } from "./training page"
+import { Quiz, Train, Pretest, Configuration } from "./training page"
 
 
 export {
@@ -24,5 +24,6 @@ export {
     Summary,
     Quiz,
     Train,
+    Configuration,
     Pretest
 }

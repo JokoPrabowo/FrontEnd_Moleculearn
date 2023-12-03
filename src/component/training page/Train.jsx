@@ -19,7 +19,7 @@ export default function Train() {
     const [atom2, setAtom2] = useState();
     const [item, setItem] = useState(false);
     const { compound } = useSelector((state) => state.compound);
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     useEffect(() => {
         const getData = async () => {
@@ -57,7 +57,7 @@ export default function Train() {
 
     return(
         <Container fluid className="train-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <>
                     <button className="close btn-close" onClick={() => navigate('/')}></button>
                     <Card className="train-card col-lg-7 col-md-9 col-sm-12 col-12">
@@ -136,9 +136,9 @@ export default function Train() {
                     </Card>
                     <Info show={modal} item={compound} true={item} getData={handleModal} onHide={handleClose}/>
                 </>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

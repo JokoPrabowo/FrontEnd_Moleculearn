@@ -4,68 +4,68 @@ import { Container, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/learn.css"
 
-import { Notfound } from "../landing page";
+// import { Notfound } from "../landing page";
 
 export default function Learn() {
     const navigate = useNavigate();
-    const [show,setShow] = useState([false], [false], [false], [false], [false]);
     const [disable, setDisable] = useState([false], [false], [false], [false], [false]);
-    const profile = localStorage.getItem("user");
-    const user = JSON.parse(profile);
+    const [show,setShow] = useState([false], [false], [false], [false], [false]);
+    // const profile = localStorage.getItem("user");
+    // const user = JSON.parse(profile);
 
-    useEffect(() => {
-        const checkLvl = () => {
-            if(user){
-                const newDisable = [...disable];
-                switch(user.level){
-                    case 1:
-                        newDisable[0] = false;
-                        newDisable[1] = true;
-                        newDisable[2] = true;
-                        newDisable[3] = true;
-                        newDisable[4] = true;
-                        break;
-                    case 2:
-                        newDisable[0] = false;
-                        newDisable[1] = false;
-                        newDisable[2] = true;
-                        newDisable[3] = true;
-                        newDisable[4] = true;
-                        break;
-                    case 3:
-                        newDisable[0] = false;
-                        newDisable[1] = false;
-                        newDisable[2] = false;
-                        newDisable[3] = true;
-                        newDisable[4] = true;
-                        break;
-                    case 4:
-                        newDisable[0] = false;
-                        newDisable[1] = false;
-                        newDisable[2] = false;
-                        newDisable[3] = false;
-                        newDisable[4] = true;
-                        break;
-                    case 5:
-                        newDisable[0] = false;
-                        newDisable[1] = false;
-                        newDisable[2] = false;
-                        newDisable[3] = false;
-                        newDisable[4] = false;
-                        break;
-                    default:
-                        newDisable[0] = true;
-                        newDisable[1] = true;
-                        newDisable[2] = true;
-                        newDisable[3] = true;
-                        newDisable[4] = true;
-                }
-                setDisable(newDisable);
-            }
-        }
-        checkLvl();
-        console.log(user);
-    }, [])
+    // useEffect(() => {
+    //     const checkLvl = () => {
+    //         if(user){
+    //             const newDisable = [...disable];
+    //             switch(user.level){
+    //                 case 1:
+    //                     newDisable[0] = false;
+    //                     newDisable[1] = true;
+    //                     newDisable[2] = true;
+    //                     newDisable[3] = true;
+    //                     newDisable[4] = true;
+    //                     break;
+    //                 case 2:
+    //                     newDisable[0] = false;
+    //                     newDisable[1] = false;
+    //                     newDisable[2] = true;
+    //                     newDisable[3] = true;
+    //                     newDisable[4] = true;
+    //                     break;
+    //                 case 3:
+    //                     newDisable[0] = false;
+    //                     newDisable[1] = false;
+    //                     newDisable[2] = false;
+    //                     newDisable[3] = true;
+    //                     newDisable[4] = true;
+    //                     break;
+    //                 case 4:
+    //                     newDisable[0] = false;
+    //                     newDisable[1] = false;
+    //                     newDisable[2] = false;
+    //                     newDisable[3] = false;
+    //                     newDisable[4] = true;
+    //                     break;
+    //                 case 5:
+    //                     newDisable[0] = false;
+    //                     newDisable[1] = false;
+    //                     newDisable[2] = false;
+    //                     newDisable[3] = false;
+    //                     newDisable[4] = false;
+    //                     break;
+    //                 default:
+    //                     newDisable[0] = true;
+    //                     newDisable[1] = true;
+    //                     newDisable[2] = true;
+    //                     newDisable[3] = true;
+    //                     newDisable[4] = true;
+    //             }
+    //             setDisable(newDisable);
+    //         }
+    //     }
+    //     checkLvl();
+    //     console.log(user);
+    // }, [])
 
     const handleShow = (num) => {
         const newShow = [...show];
@@ -146,7 +146,7 @@ export default function Learn() {
 
     return(
         <Container fluid className="learn-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <>
                     <button className="close btn-close" onClick={handleHome}></button>
                     <div className="learn-body">
@@ -212,9 +212,9 @@ export default function Learn() {
                         </div>
                     </div>
                 </>
-            ) : (
+            {/* ) : (
                 <Notfound/>               
-            )}
+            )} */}
         </Container>
     )
 }

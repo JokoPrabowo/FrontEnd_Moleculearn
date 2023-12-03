@@ -22,8 +22,8 @@ export default function Quiz() {
     const [color, setColor] = useState([false], [false], [false], [false], [false], [false], [false], [false], [false], [false]);
     const [transform, setTransform] = useState([false], [false], [false], [false], [false], [false], [false], [false], [false], [true]);
     const [isFinish, setFinish] = useState(false);
-    const profile = localStorage.getItem("user");
-    const user = JSON.parse(profile);
+    // const profile = localStorage.getItem("user");
+    // const user = JSON.parse(profile);
 
     const handlerDisable = (num) => {
         const newBtn = [...btn];
@@ -144,18 +144,18 @@ export default function Quiz() {
         const newBtn = [...btn];
         newBtn[4] = true;
         setBtn(newBtn);
-        console.log(user);
-        if(user.pretest === false){
-            dispatch(updateData())
-        }
-        dispatch(saveScore({score}));
+        // console.log(user);
+        // if(user.pretest === false){
+        //     dispatch(updateData())
+        // }
+        // dispatch(saveScore({score}));
         setTimeout(() => {
             navigate('/');
-        }, 3000);
+        },1000);
     }
     return(
         <Container fluid className="quiz-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <>
                     {isFinish ? (
                         <Card className="result-card">
@@ -283,9 +283,9 @@ export default function Quiz() {
                         </>
                     )}
                 </>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

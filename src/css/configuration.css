@@ -1,0 +1,63 @@
+.config-app{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    min-height: 100svh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.config-app .close{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+.config-card {
+    background-color: #f3f3f3;
+    border: 2px solid #cccccc;
+    padding: 10px;
+    /* background-color: yellowgreen; */
+}
+.config-body{
+    display: flex;
+    align-items: center;
+}
+.input-form input{
+    text-align: center;
+    font-size: 18px;
+    width: 50px;
+    margin: 0 10px;
+}
+.config-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.config-btn{
+    min-width: 100px;
+    min-height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffc107;
+    color: #be720e;
+    box-shadow: 0 10px #be720e;
+    font-weight: bold;
+    transition: all .20s ease;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.config-btn:active{
+    transform: translateY(10px);
+    box-shadow: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .input-form input{
+        text-align: center;
+        font-size: 16px;
+        width: 40px;
+        margin: 0 5px;
+    }
+}

@@ -10,7 +10,7 @@ import { Notfound } from "../landing page";
 export default function Subdc() {
     const navigate = useNavigate();
     const [btn, setBtn] = useState(true);
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     useEffect(() =>{
         setTimeout(() => {
@@ -23,7 +23,7 @@ export default function Subdc() {
     }
     return (
         <Container fluid className="subject-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Ikatan Kovalen</h1>
@@ -35,9 +35,9 @@ export default function Subdc() {
                         <button onClick={handleNext} disabled={btn}>Lanjutkan</button>
                     </div>
                 </div>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

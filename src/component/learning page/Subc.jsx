@@ -9,14 +9,14 @@ import { Notfound } from "../landing page";
 
 export default function Subc() {
     const navigate = useNavigate();
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     const handleNext = () => {
         navigate('/materi/ikatan_ionik/2');
     }
     return(
         <Container fluid className="subject-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Ikatan Ionik</h1>
@@ -44,9 +44,9 @@ export default function Subc() {
                         <button onClick={handleNext}>Lanjutkan</button>
                     </div>
                 </div>
-            ) : (
-                <Notfound/>
-            )}
+             {/* ) : (
+                 <Notfound/>
+             )} */}
         </Container>
     )
 }

@@ -9,17 +9,17 @@ import { Notfound } from "../landing page";
 export default function Summary() {
     const navigate = useNavigate();
     const [btn, setBtn] = useState(false);
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     const handleNext = () => {
         setBtn(true);
         setTimeout(() =>{
             navigate('/materi');
-        }, 2000);
+        }, 1000);
     }
     return(
         <Container fluid className="subject-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Rangkuman</h1>
@@ -48,9 +48,9 @@ export default function Summary() {
                         <button onClick={handleNext} disabled={btn}>Lanjutkan</button>
                     </div>
                 </div>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

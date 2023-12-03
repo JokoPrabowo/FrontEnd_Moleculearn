@@ -13,22 +13,22 @@ export default function Subdf() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [btn, setBtn] = useState(false);
-    const profile = localStorage.getItem("user");
-    const user = JSON.parse(profile);
+    // const profile = localStorage.getItem("user");
+    // const user = JSON.parse(profile);
 
     const handleNext = () => {
         setBtn(true);
-        const level = 5;
-        if(user.level < 5){
-            dispatch(updateLevel({level}));
-        }
+        // const level = 5;
+        // if(user.level < 5){
+        //     dispatch(updateLevel({level}));
+        // }
         setTimeout(() =>{
             navigate('/materi');
-        }, 2000);
+        }, 1000);
     }
     return(
         <Container fluid className="subject-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Ikatan Kovalen</h1>
@@ -51,9 +51,9 @@ export default function Subdf() {
                         <button onClick={handleNext} disabled={btn}>Lanjutkan</button>
                     </div>
                 </div>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

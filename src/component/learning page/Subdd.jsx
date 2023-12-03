@@ -9,14 +9,14 @@ import { Notfound } from "../landing page";
 
 export default function Subdd() {
     const navigate = useNavigate();
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     const handleNext = () => {
         navigate('/materi/ikatan_kovalen/6');
     }
     return(
         <Container fluid className="subject-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Ikatan Kovalen</h1>
@@ -47,9 +47,9 @@ export default function Subdd() {
                         <button onClick={handleNext}>Lanjutkan</button>
                     </div>
                 </div>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

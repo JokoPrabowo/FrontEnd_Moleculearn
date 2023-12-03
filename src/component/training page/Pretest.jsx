@@ -7,14 +7,14 @@ import { Notfound } from "../landing page";
 
 export default function Pretest() {
     const navigate = useNavigate();
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     const handleNext = () => {
         navigate('/kuis');
     }
     return(
         <Container fluid className="pretest-app">
-            {profile ? (
+            {/* {profile ? ( */}
                 <Card className="pretest-card">
                     <Card.Body className="pretest-body">
                         <h1 style={{color: "#0F52BA"}}>Selamat datang!</h1>
@@ -23,9 +23,9 @@ export default function Pretest() {
                         <button onClick={handleNext}>Lanjutkan</button>
                     </Card.Body>
                 </Card>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }

@@ -5,12 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/suba.css";
 import "../../css/subb.css";
 
-import { Notfound } from "../landing page";
+// import { Notfound } from "../landing page";
 import gb1 from "../../images/atom.png";
 
 export default function Subb() {
     const navigate = useNavigate();
-    const profile = localStorage.getItem("user");
+    // const profile = localStorage.getItem("user");
 
     const handleNext = () => {
         navigate('/materi/atom_stabil_&_tidak_stabil/2');
@@ -18,9 +18,8 @@ export default function Subb() {
 
     return(
         <Container fluid className="subject-app">
-            {profile ? (
-                <>
-                    <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
+            {/* {profile ? ( */}
+                <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
                     <div className="body-top">
                         <h1>Atom Stabil dan Atom Tidak Stabil</h1>
                     </div>
@@ -78,10 +77,9 @@ export default function Subb() {
                         <button onClick={handleNext}>Lanjutkan</button>
                     </div>
                 </div>
-                </>
-            ) : (
-                <Notfound/>
-            )}
+             {/* ) : (
+                 <Notfound/>
+             )} */}
         </Container>
     )
 }

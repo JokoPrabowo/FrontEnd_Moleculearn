@@ -1,5 +1,5 @@
 import React ,{ useState }from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,31 +8,30 @@ import "../../css/suba.css"
 import gb1 from "../../images/suba1.jpg";
 import gb2 from "../../images/suba2.png";
 
-import { Notfound } from "../landing page";
-import { updateLevel } from "../../redux/actions/authActions";
+// import { Notfound } from "../landing page";
+// import { updateLevel } from "../../redux/actions/authActions";
 
 export default function Suba() {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const [btn, setBtn] = useState(false);
-    const profile = localStorage.getItem("user");
-    const user = JSON.parse(profile);
+    // const profile = localStorage.getItem("user");
+    // const user = JSON.parse(profile);
 
     const handleHome = () => {
         setBtn(true);
-        const level = 2;
-        if(user.level < level){
-            dispatch(updateLevel({level}));
-        }
+        // const level = 2;
+        // if(user.level < level){
+        //     dispatch(updateLevel({level}));
+        // }
         setTimeout(() => {
             navigate('/materi');
-        }, 3000);
+        }, 1000);
     }
     return(
         <Container fluid className="subject-app">
-            {profile ? (
-                <>
-                    <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12">
+            {/* {profile ? ( */}
+                <div className="subject-body mx-auto col-lg-8 col-md-10 col-sm-12">
                     <div className="body-top">
                         <h1>Pengantar</h1>
                     </div>
@@ -78,10 +77,9 @@ export default function Suba() {
                         <button onClick={handleHome} disabled={btn}>Selesai</button>
                     </div>
                 </div>
-                </>
-            ) : (
+            {/* ) : (
                 <Notfound/>
-            )}
+            )} */}
         </Container>
     )
 }
